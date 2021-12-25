@@ -59,16 +59,19 @@
     right: 1%;
     top: 1%;
 }
+.remove-cart-btn{
+  margin-top: 20px;
+}
 .cart-count{
-  
+    font-size: small;
     position: absolute;
     right: 10px;
-    top: 12px;
+    top: 5px;
     z-index: 1;
     background-color: red;
     padding: 7px;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     color: #fff;
 }

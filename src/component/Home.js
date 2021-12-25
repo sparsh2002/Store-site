@@ -1,9 +1,7 @@
-const Home = () => {
+function Home (props) {
+    // console.warn('home',props.data)
     return ( 
         <div>
-            <div className="add-to-cart">
-                <img src='https://image3.mouthshut.com/images/imagesp/926084979s.png' alt='cart' />
-            </div>
             <h1>Home Component</h1>
             <div className="cart-wrapper">
                 <div className="imag-wrapper item">
@@ -18,10 +16,19 @@ const Home = () => {
                     </span>
                 </div>
                 <div className="btn-wrapper item">
-                    <button >
-                   
-            
-                        Add To Cart</button>
+                    <button 
+                        onClick={()=>{
+                            props.addToCartHandler({
+                                price:1000,
+                                name:'I phone'
+                            })
+                        }}
+                    >Add To Cart</button>
+                    <button  className="remove-cart-btn"
+                        onClick={()=>{
+                            props.removeFromCartHandler()
+                        }}
+                    >Remove from Cart</button>
                 </div>
             </div>
         </div>
